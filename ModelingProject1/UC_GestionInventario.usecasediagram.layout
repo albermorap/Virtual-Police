@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UC_GestionInventario">
+  <useCaseModelRootMoniker Id="ccc16666-6a82-42fb-a5dd-707faf7aaf1f" />
+  <nestedChildShapes>
+    <actorShape Id="03f8f262-ab22-44cc-83d4-2496c1b49223" absoluteBounds="4.75, 1.5, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="a3d47724-d52e-46d8-a2ab-13080cbf74b0" LastKnownName="Agente" />
+      <relativeChildShapes />
+    </actorShape>
+    <actorShape Id="50c8cae3-6aa2-433e-a514-639797d930c3" absoluteBounds="3.5, 1.5, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="e8294821-e20a-4440-a42c-4c8c9b7a638e" LastKnownName="Comisario" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseGeneralizationConnector edgePoints="[(4 : 1.75); (4.75 : 1.75)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110">
+      <generalizationMoniker Id="ef875807-fe79-4bc2-b673-7806f4c5bc76" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="50c8cae3-6aa2-433e-a514-639797d930c3" />
+        <actorShapeMoniker Id="03f8f262-ab22-44cc-83d4-2496c1b49223" />
+      </nodes>
+    </useCaseGeneralizationConnector>
+    <useCaseShape Id="ceb37a21-a55d-42c0-9e59-f2b01434c5cb" absoluteBounds="5.75, 1.5, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="e32bc861-bafb-4bdf-86b0-dc58b2471601" LastKnownName="Consultar inventario" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(5.25 : 1.75); (5.75 : 1.75)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="ad16163b-499a-4eb0-afd6-a4c0da7d533a" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="03f8f262-ab22-44cc-83d4-2496c1b49223" />
+        <useCaseShapeMoniker Id="ceb37a21-a55d-42c0-9e59-f2b01434c5cb" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="1649bca8-b584-4eb6-ac1f-a668977288eb" absoluteBounds="4.5, 2.875, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="b05d855c-990f-4906-bf76-3be3d27289e3" LastKnownName="Realizar pedido" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(5 : 2); (5 : 2.875)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="3b2a4751-e1f1-4585-b5dc-fc532b8683bf" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="03f8f262-ab22-44cc-83d4-2496c1b49223" />
+        <useCaseShapeMoniker Id="1649bca8-b584-4eb6-ac1f-a668977288eb" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseAssociationConnector edgePoints="[(3.97727272727273 : 2); (4.79309852784941 : 2.89740838063435)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="1728eb50-4473-4e75-9f06-de00b058c221" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="50c8cae3-6aa2-433e-a514-639797d930c3" />
+        <useCaseShapeMoniker Id="1649bca8-b584-4eb6-ac1f-a668977288eb" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

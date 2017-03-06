@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="ccc16666-6a82-42fb-a5dd-707faf7aaf1f" name="UC_GestionInventario" linkedPackageId="709dcfd4-3f8f-4a54-b1f4-919d4c36484a" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="aed4cb55-aac1-4788-90bf-768a8f8dcd5d">
+      <profileInstance Id="25c6b7e7-19d9-4ec9-95f0-450ff7cd52d3" name="CSharpProfile">
+        <elementDefinition Id="9c51f331-1a30-4b81-8cbb-621a5b468baf" />
+      </profileInstance>
+      <elementDefinition Id="67fd8352-7ab6-4606-9c34-81ad4aea05fe" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="a3d47724-d52e-46d8-a2ab-13080cbf74b0" name="Agente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="80659cb3-f5e9-432c-900e-bb7e12eaa05f" />
+        <targetEnds>
+          <association Id="3b2a4751-e1f1-4585-b5dc-fc532b8683bf" isDerived="false" sourceEndRoleName="Agente" targetEndRoleName="Realizar pedido" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b05d855c-990f-4906-bf76-3be3d27289e3" LastKnownName="Realizar pedido" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8da6eade-2fc6-4d37-b8df-506f3e084c26" name="Agente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d76855a4-ded6-4155-909c-b027fadfecd4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c2a9137a-66af-4656-8e75-3fb541d60aca" name="Realizar pedido" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a6bc66cf-2819-4c78-8cc0-83d182bac646" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="28a5f498-9b92-4378-b24a-e0e71d9d7576" />
+          </association>
+          <association Id="ad16163b-499a-4eb0-afd6-a4c0da7d533a" isDerived="false" sourceEndRoleName="Agente" targetEndRoleName="Consultar inventario" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e32bc861-bafb-4bdf-86b0-dc58b2471601" LastKnownName="Consultar inventario" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bb6c9c6b-032c-48df-94a8-2df9e1366295" name="Agente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4d0fa553-9e33-43f6-bb1d-fc4609e82549" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="85c94a03-1da6-497c-9180-347a89c1e9de" name="Consultar inventario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="00c226bc-dd0f-4c21-ba50-2b6cb752b1f6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0a27f81a-e04d-4122-949a-429ac7f0458f" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="e8294821-e20a-4440-a42c-4c8c9b7a638e" name="Comisario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ffdbf25f-c97a-4f96-bf96-51c78410bc55" />
+        <generalsInternal>
+          <generalization Id="ef875807-fe79-4bc2-b673-7806f4c5bc76" isSubstitutable="false">
+            <actorMoniker Id="a3d47724-d52e-46d8-a2ab-13080cbf74b0" LastKnownName="Agente" />
+            <elementDefinition Id="002c52eb-cbee-4cc8-ab61-911be35d3f56" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="1728eb50-4473-4e75-9f06-de00b058c221" isDerived="false" sourceEndRoleName="Jefe de policía" targetEndRoleName="Realizar pedido" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b05d855c-990f-4906-bf76-3be3d27289e3" LastKnownName="Realizar pedido" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="12a07af7-5338-45d2-928e-e1e9e2654d97" name="Jefe de policía" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="913b4428-8611-4ab4-a0b5-9ab1e76be9cb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c4637472-a585-4605-9dd7-9e6e2f335d0f" name="Realizar pedido" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="050cf512-5cc5-439d-a7dd-7ece1869bb7e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="10441fee-05f5-4343-a9ab-d6da9a3d48eb" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e32bc861-bafb-4bdf-86b0-dc58b2471601" name="Consultar inventario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="84e3be90-4db8-489b-a8a2-e0738299fc7c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b05d855c-990f-4906-bf76-3be3d27289e3" name="Realizar pedido" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="eada86c9-4bba-4e8a-a13e-98561af0b108" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="709dcfd4-3f8f-4a54-b1f4-919d4c36484a" name="Modelado">
+    <elementDefinition Id="9bf75dfc-cabd-4577-a76b-66fb17cd061b" />
+    <profileInstances>
+      <packageHasProfileInstances Id="45f394f1-3d71-4c74-a552-9b8baa961fea">
+        <profileInstance Id="c39e7255-4816-49d9-a873-e66397dad12a" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="cf8db9e2-7a18-4683-ba9c-328fd2fd1547">
+        <profileInstance Id="af8893de-fa9f-4574-a261-3bde43775ba6" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

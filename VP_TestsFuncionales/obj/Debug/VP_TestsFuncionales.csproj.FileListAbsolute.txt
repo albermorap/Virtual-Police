@@ -1,0 +1,6 @@
+C:\Users\Alberto\documents\visual studio 2013\Projects\Comisaria\VP_TestsFuncionales\bin\Debug\VP_TestsFuncionales.dll.config
+C:\Users\Alberto\documents\visual studio 2013\Projects\Comisaria\VP_TestsFuncionales\bin\Debug\VP_TestsFuncionales.dll
+C:\Users\Alberto\documents\visual studio 2013\Projects\Comisaria\VP_TestsFuncionales\bin\Debug\VP_TestsFuncionales.pdb
+C:\Users\Alberto\documents\visual studio 2013\Projects\Comisaria\VP_TestsFuncionales\obj\Debug\VP_TestsFuncionales.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\documents\visual studio 2013\Projects\Comisaria\VP_TestsFuncionales\obj\Debug\VP_TestsFuncionales.dll
+C:\Users\Alberto\documents\visual studio 2013\Projects\Comisaria\VP_TestsFuncionales\obj\Debug\VP_TestsFuncionales.pdb

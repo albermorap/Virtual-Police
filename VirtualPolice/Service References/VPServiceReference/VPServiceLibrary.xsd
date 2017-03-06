@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/VPServiceLibrary" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/VPServiceLibrary" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="DenunciaWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DNI_Denunciante" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DNI_expediente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Desaparicion" nillable="true" type="tns:DesaparicionWS" />
+      <xs:element minOccurs="0" name="Descripcion_hecho" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direccion_hecho" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha_creacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fecha_hecho" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Hora_hecho" type="ser:duration" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Naturaleza_lugar_hecho" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumPlaca" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoboCoche" nillable="true" type="tns:RoboCocheWS" />
+      <xs:element minOccurs="0" name="Secuestro" nillable="true" type="tns:SecuestroWS" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DenunciaWS" nillable="true" type="tns:DenunciaWS" />
+  <xs:complexType name="DesaparicionWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DNI_Desaparecido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion_fisica" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Foto" nillable="true" type="tns:FotoWS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DesaparicionWS" nillable="true" type="tns:DesaparicionWS" />
+  <xs:complexType name="FotoWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id_Foto" type="xs:int" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Size" type="xs:long" />
+      <xs:element minOccurs="0" name="Type" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FotoWS" nillable="true" type="tns:FotoWS" />
+  <xs:complexType name="RoboCocheWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Marca" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Matricula" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Modelo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumBastidor" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RoboCocheWS" nillable="true" type="tns:RoboCocheWS" />
+  <xs:complexType name="SecuestroWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DNI_Ciudadano" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecuestroWS" nillable="true" type="tns:SecuestroWS" />
+  <xs:complexType name="ArrayOfDenunciaWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DenunciaWS" nillable="true" type="tns:DenunciaWS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDenunciaWS" nillable="true" type="tns:ArrayOfDenunciaWS" />
+  <xs:complexType name="AgenteWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Apellido1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Apellido2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DNI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Estado_Civil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumPlaca" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rango" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AgenteWS" nillable="true" type="tns:AgenteWS" />
+  <xs:complexType name="CiudadanoWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Apellido1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Apellido2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Calle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DNI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha_Nacimiento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Huella_Dactilar" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Letra_Piso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Localidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nacionalidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Numero" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Provincia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sexo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CiudadanoWS" nillable="true" type="tns:CiudadanoWS" />
+  <xs:complexType name="ArrayOfAgenteWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AgenteWS" nillable="true" type="tns:AgenteWS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAgenteWS" nillable="true" type="tns:ArrayOfAgenteWS" />
+  <xs:complexType name="ArrayOfActividadWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActividadWS" nillable="true" type="tns:ActividadWS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActividadWS" nillable="true" type="tns:ArrayOfActividadWS" />
+  <xs:complexType name="ActividadWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Hora_Fin" type="ser:duration" />
+      <xs:element minOccurs="0" name="Hora_Inicio" type="ser:duration" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActividadWS" nillable="true" type="tns:ActividadWS" />
+  <xs:complexType name="ExpedienteWS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Altura" type="xs:double" />
+      <xs:element minOccurs="0" name="DNI" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Edad" type="xs:int" />
+      <xs:element minOccurs="0" name="Estado_Civil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha_Creacion" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Fecha_UltimaModif" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Foto" nillable="true" type="tns:FotoWS" />
+      <xs:element minOccurs="0" name="Peso" type="xs:double" />
+      <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExpedienteWS" nillable="true" type="tns:ExpedienteWS" />
+</xs:schema>

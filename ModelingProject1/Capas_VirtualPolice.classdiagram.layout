@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Capas_VirtualPolice">
+  <logicalClassDesignerModelMoniker Id="f87a3771-bd49-406a-952b-908206428471" />
+  <nestedChildShapes>
+    <packageShape Id="198ebdea-2f57-465a-91ca-409209d7f8cd" absoluteBounds="3.625, 0.875, 2.875, 1" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="36af7a2e-99ac-41e5-88f5-aa0681387f5e" LastKnownName="UIVP" />
+    </packageShape>
+    <packageShape Id="b4ea9d44-85b5-4661-866b-cd7dbd2c3e1b" absoluteBounds="3.625, 2.75, 2.875, 1" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="9d11f404-2847-44e8-898a-469fef9e35a4" LastKnownName="WSVP" />
+    </packageShape>
+    <dependencyConnector edgePoints="[(5.0625 : 1.875); (5.0625 : 2.75)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="3c13ea30-e14c-411c-9d06-0814aaa23cac" />
+      <relativeChildShapes />
+      <nodes>
+        <packageShapeMoniker Id="198ebdea-2f57-465a-91ca-409209d7f8cd" />
+        <packageShapeMoniker Id="b4ea9d44-85b5-4661-866b-cd7dbd2c3e1b" />
+      </nodes>
+    </dependencyConnector>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

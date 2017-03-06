@@ -1,0 +1,152 @@
+﻿<Window x:Class="VirtualPolice.UI_VisualizarDenuncia"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Visualizar Denuncia" Height="708.615" Width="659.701" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="Images/FondoApp.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid>
+        <Label Name="tipo_denuncia" Content="INFORME DE DENUNCIA" FontSize="20" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <TabControl Margin="0,291,0.6,0" Height="334" VerticalAlignment="Top">
+            <TabItem Header="Hechos">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="Images/FondoApp.jpg" Stretch="UniformToFill"/>
+                    </Grid.Background>
+                    <Label Content="Hechos ocurridos" FontSize="15" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                    <Label Content="Dirección hecho" HorizontalAlignment="Left" Margin="8,52,0,0" VerticalAlignment="Top" />
+                    <Label Content="Fecha" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top" />
+                    <Label Content="Descripción" HorizontalAlignment="Left" Margin="10,186,0,0" VerticalAlignment="Top" />
+                    <Label Content="Hora" HorizontalAlignment="Left" Margin="10,145,0,0" VerticalAlignment="Top" />
+                    <Label Content="Naturaleza del lugar" HorizontalAlignment="Left" Margin="10,83,0,0" VerticalAlignment="Top" />
+                    <TextBox Name="hechos_direccion" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="117,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="427" />
+                    <TextBox Name="hechos_naturaleza" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="117,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="188" />
+                    <TextBox Name="hechos_fecha" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="118,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" />
+                    <TextBox Name="hechos_hora" Focusable="False" HorizontalAlignment="Left" Height="22" Margin="117,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66" />
+                    <TextBox Name="hechos_descripcion" Focusable="False"  HorizontalAlignment="Left" Height="112" Margin="117,186,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="427"/>
+                </Grid>
+            </TabItem>
+            <TabItem Name="extras" Header="Información extra">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="Images/FondoApp.jpg" Stretch="UniformToFill"/>
+                    </Grid.Background>
+                    <Grid Name="vehiculo" Visibility="Hidden">
+                        <Label Content="Datos del vehículo robado" FontSize="15" HorizontalAlignment="Left" Margin="49,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                        <Label Content="Marca" HorizontalAlignment="Left" Margin="44,72,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Modelo" HorizontalAlignment="Left" Margin="44,116,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Color" HorizontalAlignment="Left" Margin="44,157,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Número de bastidor" HorizontalAlignment="Left" Margin="44,198,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Matrícula" HorizontalAlignment="Left" Margin="44,244,0,0" VerticalAlignment="Top"/>
+                        <TextBox Name="v_marca" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="149,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="315"/>
+                        <TextBox Name="v_modelo" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="149,116,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="315"/>
+                        <TextBox Name="v_color" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="149,158,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="315"/>
+                        <TextBox Name="v_bastidor" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="149,200,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                        <TextBox Name="v_matricula" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="149,245,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="95"/>
+                    </Grid>
+                    <Grid Name="desaparecido" Visibility="Hidden">
+                        <Label Content="Datos de la persona desaparecida" FontSize="15" HorizontalAlignment="Left" Margin="21,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                        <Label Content="DNI" HorizontalAlignment="Left" Margin="21,54,0,0" VerticalAlignment="Top"/>
+                        <TextBox Name="desa_dni" Focusable="False"  HorizontalAlignment="Left" Height="23" Margin="121,54,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                        <Label Content="Nombre" HorizontalAlignment="Left" Margin="20,84,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Apellidos" HorizontalAlignment="Left" Margin="258,84,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Fecha de Nacimiento" HorizontalAlignment="Left" Margin="20,113,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Sexo" HorizontalAlignment="Left" Margin="258,114,0,0" VerticalAlignment="Top"/>
+                        <TextBox Name="desa_nombre" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="122,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                        <TextBox Name="desa_apellidos" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="314,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                        <TextBox Name="desa_fecha" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="122,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                        <StackPanel IsEnabled="False" HorizontalAlignment="Left" Height="33" Margin="314,119,0,0" VerticalAlignment="Top" Width="67">
+                            <RadioButton x:Name="desa_sexoHombre" Content="Hombre" HorizontalAlignment="Left" VerticalAlignment="Top" Height="15" Width="62"/>
+                            <RadioButton x:Name="desa_sexoMujer" Content="Mujer" HorizontalAlignment="Left" VerticalAlignment="Top" Height="15" Width="50" />
+                        </StackPanel>
+
+                        <Label Content="Descripción física" HorizontalAlignment="Left" Margin="21,160,0,0" VerticalAlignment="Top"/>
+                        <TextBox Name="desa_descripcion" Focusable="False" HorizontalAlignment="Left" Height="105" Margin="20,189,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="596"/>
+                        <Label Content="Foto persona desparecida" HorizontalAlignment="Left" Margin="474,18,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                        <Image Name="desa_foto" HorizontalAlignment="Left" Height="137" Margin="474,47,0,0" VerticalAlignment="Top" Width="132" Source="Images/Icono.ico" />
+                    </Grid>
+                    <Grid Name="secuestrado" Visibility="Hidden">
+                        <Label Content="Datos de la persona secuestrada" FontSize="15" HorizontalAlignment="Left" Margin="49,10,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                        <Label Content="DNI" HorizontalAlignment="Left" Margin="50,56,0,0" VerticalAlignment="Top"/>
+                        <TextBox Name="secu_dni" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="156,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                        <Label Content="Nombre" HorizontalAlignment="Left" Margin="49,86,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Apellidos" HorizontalAlignment="Left" Margin="49,117,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Fecha de Nacimiento" HorizontalAlignment="Left" Margin="49,148,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Sexo" HorizontalAlignment="Left" Margin="49,179,0,0" VerticalAlignment="Top"/>
+                        <Grid>
+                            <GroupBox Header="DIRECCIÓN POSTAL" Margin="321,40,97.2,30">
+                                <Grid>
+                                    <Label Content="Calle" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top"/>
+                                    <Label Content="Número" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top"/>
+                                    <Label Content="Piso" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top"/>
+                                    <Label Content="Localidad" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top"/>
+                                    <Label Content="Provincia" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Width="46"/>
+                                    <Label Content="CP" HorizontalAlignment="Left" Margin="10,154,0,0" VerticalAlignment="Top" Width="46"/>
+                                    <Label Content="Nacionalidad" HorizontalAlignment="Left" Margin="10,182,0,0" VerticalAlignment="Top"/>
+
+                                    <TextBox Name="secu_calle" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="83,11,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                                    <TextBox Name="secu_numero" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="83,39,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                                    <TextBox Name="secu_piso" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="83,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                                    <TextBox Name="secu_localidad" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="83,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                                    <TextBox Name="secu_provincia" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="83,127,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                                    <TextBox Name="secu_cp" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="83,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                                    <TextBox Name="secu_pais" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="83,184,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                                </Grid>
+                            </GroupBox>
+                            <TextBox Name="secu_nombre" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="156,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                            <TextBox Name="secu_apellidos" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="156,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                            <TextBox Name="secu_fecha" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="156,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                        </Grid>
+                        <StackPanel IsEnabled="False" HorizontalAlignment="Left" Height="33" Margin="156,182,0,0" VerticalAlignment="Top" Width="67">
+                            <RadioButton x:Name="secu_sexoHombre" Content="Hombre" HorizontalAlignment="Left" VerticalAlignment="Top" Height="15" Width="62"/>
+                            <RadioButton x:Name="secu_sexoMujer" Content="Mujer" HorizontalAlignment="Left" VerticalAlignment="Top" Height="15" Width="50" />
+                        </StackPanel>
+                    </Grid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+        <Grid Margin="-1,37,0.6,-0.2">
+            <Label Content="Datos del denunciante" FontSize="15" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+            <Label Content="DNI" HorizontalAlignment="Left" Margin="50,56,0,0" VerticalAlignment="Top"/>
+            <TextBox Name="denun_dni" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="154,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Nombre" HorizontalAlignment="Left" Margin="49,86,0,0" VerticalAlignment="Top"/>
+            <Label Content="Apellidos" HorizontalAlignment="Left" Margin="49,117,0,0" VerticalAlignment="Top"/>
+            <Label Content="Fecha de Nacimiento" HorizontalAlignment="Left" Margin="49,148,0,0" VerticalAlignment="Top"/>
+            <Label Content="Sexo" HorizontalAlignment="Left" Margin="49,179,0,0" VerticalAlignment="Top"/>
+            <Grid Margin="-1,0,0,0.6">
+                <GroupBox Header="DIRECCIÓN POSTAL" Margin="312,30,0,0" Height="231" VerticalAlignment="Top" HorizontalAlignment="Left" Width="231">
+                    <Grid>
+                        <Label Content="Calle" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Número" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Piso" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Localidad" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top"/>
+                        <Label Content="Provincia" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Width="46"/>
+                        <Label Content="CP" HorizontalAlignment="Left" Margin="10,154,0,0" VerticalAlignment="Top" Width="46"/>
+                        <Label Content="Nacionalidad" HorizontalAlignment="Left" Margin="10,182,0,0" VerticalAlignment="Top"/>
+
+                        <TextBox Name="denun_calle" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="77,11,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                        <TextBox Name="denun_numero" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="77,39,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                        <TextBox Name="denun_piso" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="77,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                        <TextBox Name="denun_localidad" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="77,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                        <TextBox Name="denun_provincia" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="77,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                        <TextBox Name="denun_cp" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="77,153,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                        <TextBox Name="denun_pais" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="77,184,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                    </Grid>
+                </GroupBox>
+                <TextBox Name="denun_nombre" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="156,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox Name="denun_apellidos" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="156,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox Name="denun_fecha" Focusable="False" HorizontalAlignment="Left" Height="23" Margin="156,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <StackPanel IsEnabled="False" HorizontalAlignment="Left" Height="33" Margin="156,182,0,0" VerticalAlignment="Top" Width="67">
+                    <RadioButton x:Name="denun_sexoHombre" Content="Hombre" HorizontalAlignment="Left" VerticalAlignment="Top" Height="15" Width="62"/>
+                    <RadioButton x:Name="denun_sexoMujer"  Content="Mujer" HorizontalAlignment="Left" VerticalAlignment="Top" Height="15" Width="50" />
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <Button Name="salir" Content="Salir" HorizontalAlignment="Left" Margin="10,642,0,0" VerticalAlignment="Top" Width="88" Height="29" Click="salir_Click"/>
+        <Button Name="volver" Content="Volver" HorizontalAlignment="Left" Margin="10,642,0,0" VerticalAlignment="Top" Width="88" Height="29" Click="volver_Click" Visibility="Hidden"/>
+        <Button Name="asociar" Content="Asociar expediente" HorizontalAlignment="Left" Margin="507,642,0,0" VerticalAlignment="Top" Width="137" Height="29" Click="asociar_Click"/>
+        <Button Name="borrar" Content="Borrar" HorizontalAlignment="Left" Margin="206,642,0,0" VerticalAlignment="Top" Width="88" Height="29" Click="borrar_Click" Visibility="Hidden"/>
+        <Button Name="confirmar" Content="Confirmar" HorizontalAlignment="Left" Margin="309,642,0,0" VerticalAlignment="Top" Width="88" Height="29" Click="salir_Click" Visibility="Hidden"/>
+    </Grid>
+</Window>

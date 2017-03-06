@@ -1,0 +1,5 @@
+C:\Users\Alberto\Documents\Visual Studio 2013\Projects\Comisaria\VPTestUnitarias\bin\Debug\VPTestUnitarias.dll.config
+C:\Users\Alberto\Documents\Visual Studio 2013\Projects\Comisaria\VPTestUnitarias\bin\Debug\VPTestUnitarias.dll
+C:\Users\Alberto\Documents\Visual Studio 2013\Projects\Comisaria\VPTestUnitarias\bin\Debug\VPTestUnitarias.pdb
+C:\Users\Alberto\Documents\Visual Studio 2013\Projects\Comisaria\VPTestUnitarias\obj\Debug\VPTestUnitarias.dll
+C:\Users\Alberto\Documents\Visual Studio 2013\Projects\Comisaria\VPTestUnitarias\obj\Debug\VPTestUnitarias.pdb

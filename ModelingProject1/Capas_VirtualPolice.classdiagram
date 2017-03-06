@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="f87a3771-bd49-406a-952b-908206428471" name="Capas_VirtualPolice" linkedPackageId="5cf68d13-c235-4dcb-924f-596e08d394fa" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="7bbeca80-6d59-4465-b6d0-4fe1ed8784cc">
+      <profileInstance Id="c08de0fe-ccb3-45a8-89f0-26fea47e1bd3" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="0a697e11-99dd-4d48-92ae-1e207b752c27">
+      <profileInstance Id="0ec7fc28-3d7a-4da4-8f06-315f7a7db4e3" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="793ac805-5aa1-4bce-b10a-cb33675a88b6">
+      <profileInstance Id="4fb96a6e-1e53-4f42-8231-0f68844846e2" name="CSharpProfile">
+        <elementDefinition Id="9c51f331-1a30-4b81-8cbb-621a5b468baf" />
+      </profileInstance>
+      <elementDefinition Id="67fd8352-7ab6-4606-9c34-81ad4aea05fe" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="36af7a2e-99ac-41e5-88f5-aa0681387f5e" name="UIVP">
+        <elementDefinition Id="49b2754b-fa4e-4acb-9406-023d45ef377e" />
+        <suppliersInternal>
+          <dependency Id="3c13ea30-e14c-411c-9d06-0814aaa23cac">
+            <packageMoniker Id="9d11f404-2847-44e8-898a-469fef9e35a4" LastKnownName="WSVP" />
+            <elementDefinition Id="a5b0b7ad-269c-4af8-bbe3-ba964e25701b" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="9d11f404-2847-44e8-898a-469fef9e35a4" name="WSVP">
+        <elementDefinition Id="a795c116-96a9-418f-bb49-a5dcb4181e47" />
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="5cf68d13-c235-4dcb-924f-596e08d394fa" name="Modelado">
+    <elementDefinition Id="9bf75dfc-cabd-4577-a76b-66fb17cd061b" />
+  </package>
+</logicalClassDesignerModel>

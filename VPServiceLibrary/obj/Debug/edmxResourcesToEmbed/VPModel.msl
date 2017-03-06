@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VPModelStoreContainer" CdmEntityContainer="VPContext">
+    <EntitySetMapping Name="Agentes">
+      <EntityTypeMapping TypeName="IsTypeOf(VPModel.Agente)">
+        <MappingFragment StoreEntitySet="Agentes">
+          <ScalarProperty Name="ID_Agente" ColumnName="ID_Agente" />
+          <ScalarProperty Name="NumPlaca" ColumnName="NumPlaca" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Rango" ColumnName="Rango" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Estado_Civil" ColumnName="Estado_Civil" />
+          <ScalarProperty Name="Fecha_Creacion" ColumnName="Fecha_Creacion" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ciudadanos">
+      <EntityTypeMapping TypeName="IsTypeOf(VPModel.Ciudadano)">
+        <MappingFragment StoreEntitySet="Ciudadanos">
+          <ScalarProperty Name="ID_Ciudadano" ColumnName="ID_Ciudadano" />
+          <ScalarProperty Name="DNI" ColumnName="DNI" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+          <ScalarProperty Name="Fecha_Nacimiento" ColumnName="Fecha_Nacimiento" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Calle" ColumnName="Calle" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Letra_Piso" ColumnName="Letra_Piso" />
+          <ScalarProperty Name="Localidad" ColumnName="Localidad" />
+          <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="Nacionalidad" ColumnName="Nacionalidad" />
+          <ScalarProperty Name="Huella_Dactilar" ColumnName="Huella_Dactilar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Denuncias">
+      <EntityTypeMapping TypeName="IsTypeOf(VPModel.Denuncia)">
+        <MappingFragment StoreEntitySet="Denuncias">
+          <ScalarProperty Name="ID_Denuncia" ColumnName="ID_Denuncia" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Fecha_Creacion" ColumnName="Fecha_Creacion" />
+          <ScalarProperty Name="Direccion_Hecho" ColumnName="Direccion_Hecho" />
+          <ScalarProperty Name="Naturaleza_Lugar_Hecho" ColumnName="Naturaleza_Lugar_Hecho" />
+          <ScalarProperty Name="Fecha_Hecho" ColumnName="Fecha_Hecho" />
+          <ScalarProperty Name="Hora_Hecho" ColumnName="Hora_Hecho" />
+          <ScalarProperty Name="Decripcion_Hecho" ColumnName="Decripcion_Hecho" />
+          <ScalarProperty Name="ExpedienteID_Expediente" ColumnName="ExpedienteID_Expediente" />
+          <ScalarProperty Name="AgenteID_Agente" ColumnName="AgenteID_Agente" />
+          <ScalarProperty Name="CiudadanoID_Denunciante" ColumnName="CiudadanoID_Denunciante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(VPModel.RoboCoche)">
+        <MappingFragment StoreEntitySet="Denuncias_RoboCoche">
+          <ScalarProperty Name="ID_Denuncia" ColumnName="ID_Denuncia" />
+          <ScalarProperty Name="VehiculoID_Vehiculo" ColumnName="VehiculoID_Vehiculo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(VPModel.Desaparicion)">
+        <MappingFragment StoreEntitySet="Denuncias_Desaparicion">
+          <ScalarProperty Name="ID_Denuncia" ColumnName="ID_Denuncia" />
+          <ScalarProperty Name="Descripción_Fisica" ColumnName="Descripción_Fisica" />
+          <ScalarProperty Name="CiudadanoID_Ciudadano" ColumnName="CiudadanoID_Ciudadano" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="IsTypeOf(VPModel.Secuestro)">
+        <MappingFragment StoreEntitySet="Denuncias_Secuestro">
+          <ScalarProperty Name="ID_Denuncia" ColumnName="ID_Denuncia" />
+          <ScalarProperty Name="CiudadanoID_Ciudadano" ColumnName="CiudadanoID_Ciudadano" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expedientes">
+      <EntityTypeMapping TypeName="IsTypeOf(VPModel.Expediente)">
+        <MappingFragment StoreEntitySet="Expedientes">
+          <ScalarProperty Name="ID_Expediente" ColumnName="ID_Expediente" />
+          <ScalarProperty Name="Altura" ColumnName="Altura" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="Edad" ColumnName="Edad" />
+          <ScalarProperty Name="Estado_Civil" ColumnName="Estado_Civil" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Fecha_Creacion" ColumnName="Fecha_Creacion" />
+          <ScalarProperty Name="Fecha_UltimaModif" ColumnName="Fecha_UltimaModif" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Actividades">
+      <EntityTypeMapping TypeName="IsTypeOf(VPModel.Actividad)">
+        <MappingFragment StoreEntitySet="Actividades">
+          <ScalarProperty Name="ID_Actividad" ColumnName="ID_Actividad" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Hora_Inicio" ColumnName="Hora_Inicio" />
+          <ScalarProperty Name="Hora_Fin" ColumnName="Hora_Fin" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="AgenteID_Agente" ColumnName="AgenteID_Agente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehiculos">
+      <EntityTypeMapping TypeName="IsTypeOf(VPModel.Vehiculo)">
+        <MappingFragment StoreEntitySet="Vehiculos">
+          <ScalarProperty Name="ID_Vehiculo" ColumnName="ID_Vehiculo" />
+          <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="NumBastidor" ColumnName="NumBastidor" />
+          <ScalarProperty Name="CiudadanoID_Ciudadano" ColumnName="CiudadanoID_Ciudadano" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fotos">
+      <EntityTypeMapping TypeName="IsTypeOf(VPModel.Foto)">
+        <MappingFragment StoreEntitySet="Fotos">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="CiudadanoAgente" TypeName="VPModel.CiudadanoAgente" StoreEntitySet="Agentes">
+      <EndProperty Name="Ciudadano">
+        <ScalarProperty Name="ID_Ciudadano" ColumnName="Ciudadano_ID_Ciudadano" />
+      </EndProperty>
+      <EndProperty Name="Agente">
+        <ScalarProperty Name="ID_Agente" ColumnName="ID_Agente" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ExpedienteCiudadano" TypeName="VPModel.ExpedienteCiudadano" StoreEntitySet="Expedientes">
+      <EndProperty Name="Ciudadano">
+        <ScalarProperty Name="ID_Ciudadano" ColumnName="Ciudadano_ID_Ciudadano" />
+      </EndProperty>
+      <EndProperty Name="Expediente">
+        <ScalarProperty Name="ID_Expediente" ColumnName="ID_Expediente" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FotoExpediente" TypeName="VPModel.FotoExpediente" StoreEntitySet="Expedientes">
+      <EndProperty Name="Foto">
+        <ScalarProperty Name="Id" ColumnName="Foto_Id" />
+      </EndProperty>
+      <EndProperty Name="Expediente">
+        <ScalarProperty Name="ID_Expediente" ColumnName="ID_Expediente" />
+      </EndProperty>
+      <Condition ColumnName="Foto_Id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FotoDesaparicion" TypeName="VPModel.FotoDesaparicion" StoreEntitySet="Denuncias_Desaparicion">
+      <EndProperty Name="Foto">
+        <ScalarProperty Name="Id" ColumnName="Foto_Id" />
+      </EndProperty>
+      <EndProperty Name="Desaparicion">
+        <ScalarProperty Name="ID_Denuncia" ColumnName="ID_Denuncia" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

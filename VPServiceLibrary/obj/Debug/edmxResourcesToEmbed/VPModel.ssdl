@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VPModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="VPModelStoreContainer">
+    <EntitySet Name="Agentes" EntityType="VPModel.Store.Agentes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Ciudadanos" EntityType="VPModel.Store.Ciudadanos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Denuncias" EntityType="VPModel.Store.Denuncias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Expedientes" EntityType="VPModel.Store.Expedientes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Actividades" EntityType="VPModel.Store.Actividades" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Vehiculos" EntityType="VPModel.Store.Vehiculos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Fotos" EntityType="VPModel.Store.Fotos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Denuncias_RoboCoche" EntityType="VPModel.Store.Denuncias_RoboCoche" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Denuncias_Desaparicion" EntityType="VPModel.Store.Denuncias_Desaparicion" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Denuncias_Secuestro" EntityType="VPModel.Store.Denuncias_Secuestro" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="CiudadanoAgente" Association="VPModel.Store.CiudadanoAgente">
+      <End Role="Ciudadano" EntitySet="Ciudadanos" />
+      <End Role="Agente" EntitySet="Agentes" />
+    </AssociationSet>
+    <AssociationSet Name="RoboCocheVehiculo" Association="VPModel.Store.RoboCocheVehiculo">
+      <End Role="RoboCoche" EntitySet="Denuncias_RoboCoche" />
+      <End Role="Vehiculo" EntitySet="Vehiculos" />
+    </AssociationSet>
+    <AssociationSet Name="DenunciaExpediente" Association="VPModel.Store.DenunciaExpediente">
+      <End Role="Denuncia" EntitySet="Denuncias" />
+      <End Role="Expediente" EntitySet="Expedientes" />
+    </AssociationSet>
+    <AssociationSet Name="ExpedienteCiudadano" Association="VPModel.Store.ExpedienteCiudadano">
+      <End Role="Expediente" EntitySet="Expedientes" />
+      <End Role="Ciudadano" EntitySet="Ciudadanos" />
+    </AssociationSet>
+    <AssociationSet Name="ActividadAgente" Association="VPModel.Store.ActividadAgente">
+      <End Role="Actividad" EntitySet="Actividades" />
+      <End Role="Agente" EntitySet="Agentes" />
+    </AssociationSet>
+    <AssociationSet Name="DesaparicionCiudadano" Association="VPModel.Store.DesaparicionCiudadano">
+      <End Role="Desaparicion" EntitySet="Denuncias_Desaparicion" />
+      <End Role="Ciudadano" EntitySet="Ciudadanos" />
+    </AssociationSet>
+    <AssociationSet Name="SecuestroCiudadano" Association="VPModel.Store.SecuestroCiudadano">
+      <End Role="Secuestro" EntitySet="Denuncias_Secuestro" />
+      <End Role="Ciudadano" EntitySet="Ciudadanos" />
+    </AssociationSet>
+    <AssociationSet Name="VehiculoCiudadano" Association="VPModel.Store.VehiculoCiudadano">
+      <End Role="Vehiculo" EntitySet="Vehiculos" />
+      <End Role="Ciudadano" EntitySet="Ciudadanos" />
+    </AssociationSet>
+    <AssociationSet Name="DenunciaAgente" Association="VPModel.Store.DenunciaAgente">
+      <End Role="Denuncia" EntitySet="Denuncias" />
+      <End Role="Agente" EntitySet="Agentes" />
+    </AssociationSet>
+    <AssociationSet Name="FotoExpediente" Association="VPModel.Store.FotoExpediente">
+      <End Role="Foto" EntitySet="Fotos" />
+      <End Role="Expediente" EntitySet="Expedientes" />
+    </AssociationSet>
+    <AssociationSet Name="FotoDesaparicion" Association="VPModel.Store.FotoDesaparicion">
+      <End Role="Foto" EntitySet="Fotos" />
+      <End Role="Desaparicion" EntitySet="Denuncias_Desaparicion" />
+    </AssociationSet>
+    <AssociationSet Name="CiudadanoDenuncia" Association="VPModel.Store.CiudadanoDenuncia">
+      <End Role="Ciudadano" EntitySet="Ciudadanos" />
+      <End Role="Denuncia" EntitySet="Denuncias" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RoboCoche_inherits_Denuncia" Association="VPModel.Store.FK_RoboCoche_inherits_Denuncia">
+      <End Role="Denuncia" EntitySet="Denuncias" />
+      <End Role="RoboCoche" EntitySet="Denuncias_RoboCoche" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Desaparicion_inherits_Denuncia" Association="VPModel.Store.FK_Desaparicion_inherits_Denuncia">
+      <End Role="Denuncia" EntitySet="Denuncias" />
+      <End Role="Desaparicion" EntitySet="Denuncias_Desaparicion" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Secuestro_inherits_Denuncia" Association="VPModel.Store.FK_Secuestro_inherits_Denuncia">
+      <End Role="Denuncia" EntitySet="Denuncias" />
+      <End Role="Secuestro" EntitySet="Denuncias_Secuestro" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Agentes">
+    <Key>
+      <PropertyRef Name="ID_Agente" />
+    </Key>
+    <Property Name="ID_Agente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumPlaca" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Rango" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telefono" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Estado_Civil" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Fecha_Creacion" Type="datetime" Nullable="false" />
+    <Property Name="Observaciones" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Ciudadano_ID_Ciudadano" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Ciudadanos">
+    <Key>
+      <PropertyRef Name="ID_Ciudadano" />
+    </Key>
+    <Property Name="ID_Ciudadano" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DNI" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Apellido1" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Apellido2" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Fecha_Nacimiento" Type="datetime" Nullable="false" />
+    <Property Name="Sexo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Calle" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Numero" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Letra_Piso" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Localidad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Provincia" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CP" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nacionalidad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Huella_Dactilar" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Denuncias">
+    <Key>
+      <PropertyRef Name="ID_Denuncia" />
+    </Key>
+    <Property Name="ID_Denuncia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tipo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Fecha_Creacion" Type="datetime" Nullable="false" />
+    <Property Name="Direccion_Hecho" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Naturaleza_Lugar_Hecho" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Fecha_Hecho" Type="datetime" Nullable="false" />
+    <Property Name="Hora_Hecho" Type="time" Nullable="false" />
+    <Property Name="Decripcion_Hecho" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ExpedienteID_Expediente" Type="int" Nullable="true" />
+    <Property Name="AgenteID_Agente" Type="int" Nullable="false" />
+    <Property Name="CiudadanoID_Denunciante" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Expedientes">
+    <Key>
+      <PropertyRef Name="ID_Expediente" />
+    </Key>
+    <Property Name="ID_Expediente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Altura" Type="float" Nullable="true" />
+    <Property Name="Peso" Type="float" Nullable="true" />
+    <Property Name="Edad" Type="int" Nullable="false" />
+    <Property Name="Estado_Civil" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Telefono" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Fecha_Creacion" Type="datetime" Nullable="false" />
+    <Property Name="Fecha_UltimaModif" Type="datetime" Nullable="false" />
+    <Property Name="Ciudadano_ID_Ciudadano" Type="int" Nullable="false" />
+    <Property Name="Foto_Id" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Actividades">
+    <Key>
+      <PropertyRef Name="ID_Actividad" />
+    </Key>
+    <Property Name="ID_Actividad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Hora_Inicio" Type="time" Nullable="false" Precision="7" />
+    <Property Name="Hora_Fin" Type="time" Nullable="false" Precision="7" />
+    <Property Name="Tipo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="AgenteID_Agente" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vehiculos">
+    <Key>
+      <PropertyRef Name="ID_Vehiculo" />
+    </Key>
+    <Property Name="ID_Vehiculo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Matricula" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Marca" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Modelo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Color" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NumBastidor" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CiudadanoID_Ciudadano" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Fotos">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="varbinary(max)" Nullable="false" />
+    <Property Name="Size" Type="bigint" Nullable="false" />
+    <Property Name="Type" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Denuncias_RoboCoche">
+    <Key>
+      <PropertyRef Name="ID_Denuncia" />
+    </Key>
+    <Property Name="VehiculoID_Vehiculo" Type="int" Nullable="false" />
+    <Property Name="ID_Denuncia" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Denuncias_Desaparicion">
+    <Key>
+      <PropertyRef Name="ID_Denuncia" />
+    </Key>
+    <Property Name="Descripción_Fisica" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CiudadanoID_Ciudadano" Type="int" Nullable="false" />
+    <Property Name="ID_Denuncia" Type="int" Nullable="false" />
+    <Property Name="Foto_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Denuncias_Secuestro">
+    <Key>
+      <PropertyRef Name="ID_Denuncia" />
+    </Key>
+    <Property Name="CiudadanoID_Ciudadano" Type="int" Nullable="false" />
+    <Property Name="ID_Denuncia" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="CiudadanoAgente">
+    <End Role="Ciudadano" Type="VPModel.Store.Ciudadanos" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Agente" Type="VPModel.Store.Agentes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudadano">
+        <PropertyRef Name="ID_Ciudadano" />
+      </Principal>
+      <Dependent Role="Agente">
+        <PropertyRef Name="Ciudadano_ID_Ciudadano" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RoboCocheVehiculo">
+    <End Role="RoboCoche" Type="VPModel.Store.Denuncias_RoboCoche" Multiplicity="*" />
+    <End Role="Vehiculo" Type="VPModel.Store.Vehiculos" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <ReferentialConstraint>
+      <Principal Role="Vehiculo">
+        <PropertyRef Name="ID_Vehiculo" />
+      </Principal>
+      <Dependent Role="RoboCoche">
+        <PropertyRef Name="VehiculoID_Vehiculo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DenunciaExpediente">
+    <End Role="Denuncia" Type="VPModel.Store.Denuncias" Multiplicity="*" />
+    <End Role="Expediente" Type="VPModel.Store.Expedientes" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Expediente">
+        <PropertyRef Name="ID_Expediente" />
+      </Principal>
+      <Dependent Role="Denuncia">
+        <PropertyRef Name="ExpedienteID_Expediente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ExpedienteCiudadano">
+    <End Role="Expediente" Type="VPModel.Store.Expedientes" Multiplicity="*" />
+    <End Role="Ciudadano" Type="VPModel.Store.Ciudadanos" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudadano">
+        <PropertyRef Name="ID_Ciudadano" />
+      </Principal>
+      <Dependent Role="Expediente">
+        <PropertyRef Name="Ciudadano_ID_Ciudadano" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ActividadAgente">
+    <End Role="Actividad" Type="VPModel.Store.Actividades" Multiplicity="*" />
+    <End Role="Agente" Type="VPModel.Store.Agentes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <ReferentialConstraint>
+      <Principal Role="Agente">
+        <PropertyRef Name="ID_Agente" />
+      </Principal>
+      <Dependent Role="Actividad">
+        <PropertyRef Name="AgenteID_Agente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DesaparicionCiudadano">
+    <End Role="Desaparicion" Type="VPModel.Store.Denuncias_Desaparicion" Multiplicity="*" />
+    <End Role="Ciudadano" Type="VPModel.Store.Ciudadanos" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <ReferentialConstraint>
+      <Principal Role="Ciudadano">
+        <PropertyRef Name="ID_Ciudadano" />
+      </Principal>
+      <Dependent Role="Desaparicion">
+        <PropertyRef Name="CiudadanoID_Ciudadano" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SecuestroCiudadano">
+    <End Role="Secuestro" Type="VPModel.Store.Denuncias_Secuestro" Multiplicity="*" />
+    <End Role="Ciudadano" Type="VPModel.Store.Ciudadanos" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <ReferentialConstraint>
+      <Principal Role="Ciudadano">
+        <PropertyRef Name="ID_Ciudadano" />
+      </Principal>
+      <Dependent Role="Secuestro">
+        <PropertyRef Name="CiudadanoID_Ciudadano" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="VehiculoCiudadano">
+    <End Role="Vehiculo" Type="VPModel.Store.Vehiculos" Multiplicity="*" />
+    <End Role="Ciudadano" Type="VPModel.Store.Ciudadanos" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <ReferentialConstraint>
+      <Principal Role="Ciudadano">
+        <PropertyRef Name="ID_Ciudadano" />
+      </Principal>
+      <Dependent Role="Vehiculo">
+        <PropertyRef Name="CiudadanoID_Ciudadano" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DenunciaAgente">
+    <End Role="Denuncia" Type="VPModel.Store.Denuncias" Multiplicity="*" />
+    <End Role="Agente" Type="VPModel.Store.Agentes" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Agente">
+        <PropertyRef Name="ID_Agente" />
+      </Principal>
+      <Dependent Role="Denuncia">
+        <PropertyRef Name="AgenteID_Agente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FotoExpediente">
+    <End Role="Foto" Type="VPModel.Store.Fotos" Multiplicity="0..1" />
+    <End Role="Expediente" Type="VPModel.Store.Expedientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Foto">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Expediente">
+        <PropertyRef Name="Foto_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FotoDesaparicion">
+    <End Role="Foto" Type="VPModel.Store.Fotos" Multiplicity="1" />
+    <End Role="Desaparicion" Type="VPModel.Store.Denuncias_Desaparicion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Foto">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Desaparicion">
+        <PropertyRef Name="Foto_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CiudadanoDenuncia">
+    <End Role="Ciudadano" Type="VPModel.Store.Ciudadanos" Multiplicity="1" />
+    <End Role="Denuncia" Type="VPModel.Store.Denuncias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ciudadano">
+        <PropertyRef Name="ID_Ciudadano" />
+      </Principal>
+      <Dependent Role="Denuncia">
+        <PropertyRef Name="CiudadanoID_Denunciante" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RoboCoche_inherits_Denuncia">
+    <End Role="Denuncia" Type="VPModel.Store.Denuncias" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RoboCoche" Type="VPModel.Store.Denuncias_RoboCoche" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Denuncia">
+        <PropertyRef Name="ID_Denuncia" />
+      </Principal>
+      <Dependent Role="RoboCoche">
+        <PropertyRef Name="ID_Denuncia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Desaparicion_inherits_Denuncia">
+    <End Role="Denuncia" Type="VPModel.Store.Denuncias" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Desaparicion" Type="VPModel.Store.Denuncias_Desaparicion" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Denuncia">
+        <PropertyRef Name="ID_Denuncia" />
+      </Principal>
+      <Dependent Role="Desaparicion">
+        <PropertyRef Name="ID_Denuncia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Secuestro_inherits_Denuncia">
+    <End Role="Denuncia" Type="VPModel.Store.Denuncias" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Secuestro" Type="VPModel.Store.Denuncias_Secuestro" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Denuncia">
+        <PropertyRef Name="ID_Denuncia" />
+      </Principal>
+      <Dependent Role="Secuestro">
+        <PropertyRef Name="ID_Denuncia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

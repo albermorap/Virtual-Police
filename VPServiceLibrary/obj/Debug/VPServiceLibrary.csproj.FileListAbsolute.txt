@@ -1,0 +1,10 @@
+C:\Users\Alberto\documents\visual studio 2013\Projects\Comisaria\VPServiceLibrary\bin\Debug\VPServiceLibrary.dll.config
+C:\Users\Alberto\documents\visual studio 2013\Projects\Comisaria\VPServiceLibrary\bin\Debug\VPServiceLibrary.dll
+C:\Users\Alberto\documents\visual studio 2013\Projects\Comisaria\VPServiceLibrary\bin\Debug\VPServiceLibrary.pdb
+C:\Users\Alberto\documents\visual studio 2013\Projects\Comisaria\VPServiceLibrary\bin\Debug\EntityFramework.dll
+C:\Users\Alberto\documents\visual studio 2013\Projects\Comisaria\VPServiceLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Alberto\documents\visual studio 2013\Projects\Comisaria\VPServiceLibrary\bin\Debug\EntityFramework.xml
+C:\Users\Alberto\documents\visual studio 2013\Projects\Comisaria\VPServiceLibrary\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Alberto\documents\visual studio 2013\Projects\Comisaria\VPServiceLibrary\obj\Debug\VPServiceLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Alberto\documents\visual studio 2013\Projects\Comisaria\VPServiceLibrary\obj\Debug\VPServiceLibrary.dll
+C:\Users\Alberto\documents\visual studio 2013\Projects\Comisaria\VPServiceLibrary\obj\Debug\VPServiceLibrary.pdb

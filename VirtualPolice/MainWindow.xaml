@@ -1,0 +1,56 @@
+﻿<Window x:Class="VirtualPolice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Menú de inicio" Height="373.582" Width="590.986" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="butStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+        </Style>
+    </Window.Resources>
+
+    <Window.Background>
+        <ImageBrush ImageSource="Images/FondoApp.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Grid>
+        <Button x:Name="b_alta" Content="Alta agente" HorizontalAlignment="Left" Margin="270,106,0,0" VerticalAlignment="Top" Width="112" Height="46" Click="b_alta_Click"/>
+        <Button x:Name="b_crear_d" Content="Crear denuncia" HorizontalAlignment="Left" Margin="207,106,0,0" VerticalAlignment="Top" Width="112" Height="46" Click="b_crear_d_Click"/>
+        <Button x:Name="b_expediente" Content=" Visualizar&#xA;expediente" HorizontalAlignment="Left" Margin="45,107,0,0" VerticalAlignment="Top" Width="112" Height="46" Click="b_expediente_Click"/>
+        <Button x:Name="b_plan_comisario" Content="Consultar planning&#xA;         agentes" HorizontalAlignment="Left" Margin="270,166,0,0" VerticalAlignment="Top" Width="112" Height="46" Click="b_plan_comisario_Click"/>
+        <Button x:Name="b_ver_d" Content="Visualizar&#xA;denuncia" HorizontalAlignment="Left" Margin="334,106,0,0" VerticalAlignment="Top" Width="112" Height="46" Click="b_ver_d_Click"/>
+        <Button x:Name="b_denuncias" Content="Apartado de &#xD;&#xA;  denuncias" HorizontalAlignment="Left" Margin="45,46,0,0" VerticalAlignment="Top" Width="112" Height="46" Click="b_denuncias_Click" VerticalContentAlignment="Center" />
+        <Button x:Name="b_online" Content=" Notificaciones &#xD;&#xA;denuncia online" HorizontalAlignment="Left" Margin="270,166,0,0" VerticalAlignment="Top" Width="112" Height="46" Click="b_online_Click"/>
+        <Button x:Name="b_plan_agente" Content="Consultar planning&#xA;          usuario" HorizontalAlignment="Left" Margin="45,166,0,0" VerticalAlignment="Top" Width="112" Height="46" Click="b_plan_agente_Click"/>
+        <Button x:Name="b_comisario" Content="Privilegios&#xD;&#xA;comisario" HorizontalAlignment="Left" Margin="45,166,0,0" VerticalAlignment="Top" Width="112" Height="46" Click="b_comisario_Click"/>
+        <Separator HorizontalAlignment="Left" Height="100" Margin="36,116,0,0" VerticalAlignment="Top" Width="288" RenderTransformOrigin="0.5,0.5">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+        <Button x:Name="b_acercade" ToolTip="Acerca de" Margin="4,295,526.8,0" VerticalAlignment="Top" Click="b_acercade_Click" Style="{StaticResource butStyle}" Height="40">
+            <Image Source="Images\Icono_acercade.png" />
+        </Button>
+        <Button x:Name="b_ayuda" ToolTip="Ayuda" HorizontalAlignment="Left" Margin="58,295,0,0" VerticalAlignment="Top" Width="46" Style="{StaticResource butStyle}" Click="b_ayuda_Click" Height="40">
+            <Image Source="Images\Icono_ayuda.gif" />
+        </Button>
+
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="24" Margin="379,0,0,0" VerticalAlignment="Top" Width="196"/>
+        <Expander x:Name="e_expand" Header="Nombre" HorizontalAlignment="Left" Height="115" Margin="349,0,0,0" VerticalAlignment="Top" Width="226" Foreground="#FF0A49B6" FontWeight="Bold">
+            <StackPanel>
+                <StackPanel.Background>
+                    <SolidColorBrush Color="White" Opacity="0.75"/>
+                </StackPanel.Background>
+                <Label x:Name="l_numplaca" Content="Nº Placa:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="22" FontSize="10" Foreground="#FF0A49B6"/>
+                <Label x:Name="l_rango" Content="Rango:" HorizontalAlignment="Left"  VerticalAlignment="Top" FontSize="10" Height="23" Foreground="#FF0A49B6"/>
+                <Button x:Name="b_ver_exp" Style="{StaticResource butStyle}" Content="» Ver perfil"  FontSize="10" Click="data_user" FontWeight="Bold" Foreground="Black" Margin="107,0,0,0" HorizontalAlignment="Left" Width="104"/>
+                <Button x:Name="b_cerrar_ses" Style="{StaticResource butStyle}" Content="» Cerrar sesión" BorderThickness="0" FontSize="10" Click="Cerrar_Sesion" FontWeight="Bold" Foreground="Black" Margin="107,0,0,0"/>
+            </StackPanel>
+        </Expander>
+
+    </Grid>
+</Window>

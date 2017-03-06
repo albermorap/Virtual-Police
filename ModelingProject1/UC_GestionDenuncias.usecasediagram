@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="19d10bf7-c2fc-44bc-a383-bb0ac4e8d8b5" name="UC_GestionDenuncias" linkedPackageId="12aa8127-edf5-4716-949c-df2932950cc2" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="ad5a7c98-dab4-48de-b7a8-967dfcf9b8c8">
+      <profileInstance Id="ebd53d13-e3d9-4bed-a3ae-c5ad4b1f8513" name="CSharpProfile">
+        <elementDefinition Id="9c51f331-1a30-4b81-8cbb-621a5b468baf" />
+      </profileInstance>
+      <elementDefinition Id="67fd8352-7ab6-4606-9c34-81ad4aea05fe" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="343f87d1-7579-476c-89f4-0f9edee52038" name="Ciudadano" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8b941184-c339-4ff4-977e-19e24dc082f2" />
+        <targetEnds>
+          <association Id="9071a25d-28bb-41df-9780-71365436c9ab" isDerived="false" sourceEndRoleName="Ciudadano" targetEndRoleName="Notificar infracción" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b1166b7a-7762-43b1-a408-b6f636499048" LastKnownName="Crear denuncia" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="832ecf89-985c-4e72-ac3e-33358eed5cd4" name="Ciudadano" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c57f59be-e036-4711-8ab0-3320f93f5038" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6668a277-79a8-4d08-9aef-39fa7a24c545" name="Notificar infracción" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b3282ecd-ccb4-49f7-9750-1f023697e62d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="496cc056-b96c-408e-84f7-2b1d6ef9802f" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="33cb956c-07b6-45c9-ae06-a13fe3ffa2a6" name="Agente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="80659cb3-f5e9-432c-900e-bb7e12eaa05f" />
+        <targetEnds>
+          <association Id="7361e78b-49c7-43e7-a0f2-9c20ab65621c" isDerived="false" sourceEndRoleName="Agente" targetEndRoleName="Arrestar" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b5de2465-5715-46eb-9896-87303b1da08e" LastKnownName="Registrar arresto" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="29c3d1ca-7d07-4f43-b2af-1a46fa8d8fa0" name="Agente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="29ab5461-5561-48f4-9bf7-cabcf7e907a9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fcbb68c3-e2cd-45ca-bb1a-90ec6154c42b" name="Arrestar" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2975b38d-abd8-4621-a5c0-32b8b432dee5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="836ff80f-14cd-402d-ba35-f5dcfc47db26" />
+          </association>
+          <association Id="0fc1acc7-4be9-430c-bd8d-7d69440e4849" isDerived="false" sourceEndRoleName="Agente" targetEndRoleName="Consultar antecedentes" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="48e14d76-1da0-4390-91fa-e3d4b86c3e67" LastKnownName="Consultar expediente" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d6f710ec-2056-46ce-8cac-a1a7ec42f498" name="Agente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="64350480-7a2f-4464-b673-14053bbe2463" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7c5534fc-1c63-442f-9ea2-37c22bc0f593" name="Consultar antecedentes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c6739d69-51e1-48b1-9f84-52e4b563f130" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="59592b5f-a9a3-4ef2-9767-f433b177a253" />
+          </association>
+          <association Id="fce5b422-e076-44a4-b1f4-5cd02497b0af" isDerived="false" sourceEndRoleName="Agente" targetEndRoleName="Notificar infracción" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b1166b7a-7762-43b1-a408-b6f636499048" LastKnownName="Crear denuncia" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2b4e7bba-8e18-4019-8494-7e567dcc3d67" name="Agente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9555d710-bc31-4620-95ac-17cc060ed173" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="57862ca4-c919-40ad-8d31-dff25b78a49c" name="Notificar infracción" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a19e1edc-a90c-417c-96d8-e5f09fa02b3e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9c8529c8-d09e-41ce-8060-da767e7f69c5" />
+          </association>
+          <association Id="a511a46e-4003-4e2b-b554-d9ca14301777" isDerived="false" sourceEndRoleName="Agente" targetEndRoleName="Consultar infracción" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="86c41cb7-3fa2-475f-8adb-97564d3a008b" LastKnownName="Consultar denuncia" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="aee96105-6fcf-49a8-8b92-49a2d771b4c3" name="Agente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="906c1bbb-6fbb-4b35-884b-7f4192308a59" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d53e94b7-6e01-41a6-82e8-a0102f305a6c" name="Consultar infracción" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="23e00372-ccd5-464a-9b83-2294ce55557d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dd7584c8-73ce-4205-84c9-02be1a47013b" />
+          </association>
+          <association Id="295cae66-d51f-422f-a37c-8c8036d467a6" isDerived="false" sourceEndRoleName="Agente" targetEndRoleName="Abrir/modificar expediente" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ab02cc88-0535-4622-bb62-c2190c6ccc75" LastKnownName="Abrir/modificar expediente" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8cc30cee-de24-4821-a374-1a36e885ed07" name="Agente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d249de4b-45b6-4d50-b6cf-67b60bafb7ba" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f431af46-8280-4ea8-8709-33b076016924" name="Abrir/modificar expediente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="510a0f1f-f77f-40b1-aec6-d93ea927f347" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8ab0d27f-c7d4-4509-8edb-0b5064e980ed" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="0d0fe013-082f-468c-9661-5467f94b7eec" name="Comisario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ffdbf25f-c97a-4f96-bf96-51c78410bc55" />
+        <generalsInternal>
+          <generalization Id="5cb4d0ad-33d7-4dfc-8981-c879d9f78f85" isSubstitutable="false">
+            <actorMoniker Id="33cb956c-07b6-45c9-ae06-a13fe3ffa2a6" LastKnownName="Agente" />
+            <elementDefinition Id="002c52eb-cbee-4cc8-ab61-911be35d3f56" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="16047e3c-a755-4b0b-adf9-7684e0165373" isDerived="false" sourceEndRoleName="Jefe de policía" targetEndRoleName="Invalidar denuncia" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="48566b89-9c7c-40c6-b6b6-b901d99ce364" LastKnownName="Invalidar denuncia" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f1413688-0711-43fa-bdcb-5877289c850e" name="Jefe de policía" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4afef43c-64c2-430f-985e-801ddcc09cb1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5f1ed0c7-4d94-4e6e-91ad-ce809eea4e71" name="Invalidar denuncia" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9e61f935-83f2-4d83-8d31-edd708d1f2b3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="42ab1939-23b3-4a22-87a9-fba0e3befd88" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b1166b7a-7762-43b1-a408-b6f636499048" name="Crear denuncia" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1e609a91-5673-4712-a082-ad916ccdc465" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="48566b89-9c7c-40c6-b6b6-b901d99ce364" name="Invalidar denuncia" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e59604e6-4fa1-4c86-aeb8-93594826be66" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ab02cc88-0535-4622-bb62-c2190c6ccc75" name="Abrir/modificar expediente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5f31f804-b1bc-4836-98f4-4989021ce22b" />
+        <extendedCases>
+          <extend Id="762c370a-0bdd-4d79-9ece-9cef353ce173">
+            <useCaseMoniker Id="b1166b7a-7762-43b1-a408-b6f636499048" LastKnownName="Crear denuncia" />
+            <elementDefinition Id="bea268a4-dae4-447d-bec1-7c4f17d0d57c" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="840d11b6-ba14-4471-ac72-9ea2dad1546a" name="Delicuente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7e9bf73b-ab49-44d8-8d4e-1c179a406e5b" />
+        <generalsInternal>
+          <generalization Id="fd41ff89-f6f2-4a13-b470-a7358ba5710b" isSubstitutable="false">
+            <actorMoniker Id="343f87d1-7579-476c-89f4-0f9edee52038" LastKnownName="Ciudadano" />
+            <elementDefinition Id="c3c7dfb1-3ab4-405d-8aa5-0aa920783aae" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="fb46b1f5-aa42-440e-8341-afebdba9e3f2" isDerived="false" sourceEndRoleName="Delicuente" targetEndRoleName="Arrestar" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b5de2465-5715-46eb-9896-87303b1da08e" LastKnownName="Registrar arresto" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="899918e0-27ec-48c6-94fa-4b1c23a14c96" name="Delicuente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b1fe574b-524a-4b21-886f-a5af1c9b0f9f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="90a645ae-5508-4ec3-8710-0c80848e4b06" name="Arrestar" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="40620bbe-d1e5-4846-b55b-08612459eaaf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="74c6769f-d6b0-42a7-baae-5156c65bc960" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b5de2465-5715-46eb-9896-87303b1da08e" name="Registrar arresto" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3ff88cb0-115a-4fbd-a69e-5866988fdb50" />
+        <additions>
+          <include Id="5099b608-f7d9-47c0-8927-a213558063c7">
+            <useCaseMoniker Id="b1166b7a-7762-43b1-a408-b6f636499048" LastKnownName="Crear denuncia" />
+            <elementDefinition Id="f5842c65-2e73-40ab-8e31-1fe24c6d8b63" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="48e14d76-1da0-4390-91fa-e3d4b86c3e67" name="Consultar expediente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="38cc7142-200c-462e-8953-8c740314866b" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="86c41cb7-3fa2-475f-8adb-97564d3a008b" name="Consultar denuncia" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="292915dc-b5ec-4136-af70-777e1c102b85" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="12aa8127-edf5-4716-949c-df2932950cc2" name="Modelado">
+    <elementDefinition Id="9bf75dfc-cabd-4577-a76b-66fb17cd061b" />
+    <profileInstances>
+      <packageHasProfileInstances Id="04fe3bcd-825f-4d63-a5b2-67368b30f7da">
+        <profileInstance Id="011c14e9-99aa-41b0-8b8e-16c7dc6c504b" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="78ebc325-fcf3-4533-8942-a02d8e188fdd">
+        <profileInstance Id="acf372cc-bacd-4df4-8560-766adf78bdc7" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

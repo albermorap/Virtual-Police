@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{e42cafd6-852d-4e84-be89-d43688220fb2}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>Modelado</Name>
+    <RootNamespace>ModelingProject1</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Content Include="Capas_VirtualPolice.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Capas_VirtualPolice.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Capas_VirtualPolice.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="CD_Abrir-ModificarExpediente.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CD_Abrir-ModificarExpediente.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CD_Abrir-ModificarExpediente.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="CD_AltaAgente.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CD_AltaAgente.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CD_AltaAgente.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="CD_ConsultaPlanning.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CD_ConsultaPlanning.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CD_ConsultaPlanning.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="CD_CrearDenuncia.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CD_CrearDenuncia.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CD_CrearDenuncia.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="D-Abrir-ModificarExpediente.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="D-Abrir-ModificarExpediente.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>D-Abrir-ModificarExpediente.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="D-AltaAgente.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="D-AltaAgente.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>D-AltaAgente.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="D-ConsultarPlanning.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="D-ConsultarPlanning.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>D-ConsultarPlanning.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="D-CrearDenuncia.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="D-CrearDenuncia.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>D-CrearDenuncia.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package1_0325.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1423.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1847.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_0325.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1423.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1423.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1630.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1631.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1847.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UC_GestionDenuncias.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UC_GestionDenuncias.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UC_GestionDenuncias.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="UC_GestionComisaria.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UC_GestionComisaria.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UC_GestionComisaria.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="UC_GestionInventario.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UC_GestionInventario.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UC_GestionInventario.usecasediagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\ModelingProject1.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>

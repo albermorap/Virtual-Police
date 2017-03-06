@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="VPService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="bassicConfiguration_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/VPServiceLibrary" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IVPService_AddDenuncia_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDenuncia" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_AddDenuncia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDenunciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_DeleteDenuncia_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDenuncia" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_DeleteDenuncia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDenunciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_GetDenuncia_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDenuncia" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_GetDenuncia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDenunciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_GetNotificaciones_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotificaciones" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_GetNotificaciones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNotificacionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_AddAgente_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAgente" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_AddAgente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAgenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_AddCiudadano_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCiudadano" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_AddCiudadano_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCiudadanoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_GetAgente_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgente" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_GetAgente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_ComprobarPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarPassword" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_ComprobarPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_GetCiudadano_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCiudadano" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_GetCiudadano_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCiudadanoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_GetAgentes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentes" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_GetAgentes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAgentesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_GetPlanning_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanning" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_GetPlanning_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlanningResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_ComprobarCiuAgente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarCiuAgente" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_ComprobarCiuAgente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarCiuAgenteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_ComprobarConexion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarConexion" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_ComprobarConexion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarConexionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_GetExpediente_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpediente" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_GetExpediente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExpedienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_CrearExpediente_InputMessage">
+    <wsdl:part name="parameters" element="tns:CrearExpediente" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_CrearExpediente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CrearExpedienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_AsociarExpediente_InputMessage">
+    <wsdl:part name="parameters" element="tns:AsociarExpediente" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_AsociarExpediente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AsociarExpedienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_GetDenuncias_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDenuncias" />
+  </wsdl:message>
+  <wsdl:message name="IVPService_GetDenuncias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDenunciasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IVPService">
+    <wsdl:operation name="AddDenuncia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVPService/AddDenuncia" message="tns:IVPService_AddDenuncia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVPService/AddDenunciaResponse" message="tns:IVPService_AddDenuncia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDenuncia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVPService/DeleteDenuncia" message="tns:IVPService_DeleteDenuncia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVPService/DeleteDenunciaResponse" message="tns:IVPService_DeleteDenuncia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDenuncia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVPService/GetDenuncia" message="tns:IVPService_GetDenuncia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVPService/GetDenunciaResponse" message="tns:IVPService_GetDenuncia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNotificaciones">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVPService/GetNotificaciones" message="tns:IVPService_GetNotificaciones_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVPService/GetNotificacionesResponse" message="tns:IVPService_GetNotificaciones_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAgente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVPService/AddAgente" message="tns:IVPService_AddAgente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVPService/AddAgenteResponse" message="tns:IVPService_AddAgente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCiudadano">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVPService/AddCiudadano" message="tns:IVPService_AddCiudadano_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVPService/AddCiudadanoResponse" message="tns:IVPService_AddCiudadano_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVPService/GetAgente" message="tns:IVPService_GetAgente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVPService/GetAgenteResponse" message="tns:IVPService_GetAgente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVPService/ComprobarPassword" message="tns:IVPService_ComprobarPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVPService/ComprobarPasswordResponse" message="tns:IVPService_ComprobarPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCiudadano">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVPService/GetCiudadano" message="tns:IVPService_GetCiudadano_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVPService/GetCiudadanoResponse" message="tns:IVPService_GetCiudadano_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVPService/GetAgentes" message="tns:IVPService_GetAgentes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVPService/GetAgentesResponse" message="tns:IVPService_GetAgentes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanning">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVPService/GetPlanning" message="tns:IVPService_GetPlanning_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVPService/GetPlanningResponse" message="tns:IVPService_GetPlanning_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarCiuAgente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVPService/ComprobarCiuAgente" message="tns:IVPService_ComprobarCiuAgente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVPService/ComprobarCiuAgenteResponse" message="tns:IVPService_ComprobarCiuAgente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarConexion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVPService/ComprobarConexion" message="tns:IVPService_ComprobarConexion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVPService/ComprobarConexionResponse" message="tns:IVPService_ComprobarConexion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExpediente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVPService/GetExpediente" message="tns:IVPService_GetExpediente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVPService/GetExpedienteResponse" message="tns:IVPService_GetExpediente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CrearExpediente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVPService/CrearExpediente" message="tns:IVPService_CrearExpediente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVPService/CrearExpedienteResponse" message="tns:IVPService_CrearExpediente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AsociarExpediente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVPService/AsociarExpediente" message="tns:IVPService_AsociarExpediente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVPService/AsociarExpedienteResponse" message="tns:IVPService_AsociarExpediente_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDenuncias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVPService/GetDenuncias" message="tns:IVPService_GetDenuncias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVPService/GetDenunciasResponse" message="tns:IVPService_GetDenuncias_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="bassicConfiguration" type="tns:IVPService">
+    <wsp:PolicyReference URI="#bassicConfiguration_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddDenuncia">
+      <soap:operation soapAction="http://tempuri.org/IVPService/AddDenuncia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDenuncia">
+      <soap:operation soapAction="http://tempuri.org/IVPService/DeleteDenuncia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDenuncia">
+      <soap:operation soapAction="http://tempuri.org/IVPService/GetDenuncia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNotificaciones">
+      <soap:operation soapAction="http://tempuri.org/IVPService/GetNotificaciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAgente">
+      <soap:operation soapAction="http://tempuri.org/IVPService/AddAgente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCiudadano">
+      <soap:operation soapAction="http://tempuri.org/IVPService/AddCiudadano" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgente">
+      <soap:operation soapAction="http://tempuri.org/IVPService/GetAgente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarPassword">
+      <soap:operation soapAction="http://tempuri.org/IVPService/ComprobarPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCiudadano">
+      <soap:operation soapAction="http://tempuri.org/IVPService/GetCiudadano" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAgentes">
+      <soap:operation soapAction="http://tempuri.org/IVPService/GetAgentes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlanning">
+      <soap:operation soapAction="http://tempuri.org/IVPService/GetPlanning" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarCiuAgente">
+      <soap:operation soapAction="http://tempuri.org/IVPService/ComprobarCiuAgente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarConexion">
+      <soap:operation soapAction="http://tempuri.org/IVPService/ComprobarConexion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExpediente">
+      <soap:operation soapAction="http://tempuri.org/IVPService/GetExpediente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrearExpediente">
+      <soap:operation soapAction="http://tempuri.org/IVPService/CrearExpediente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AsociarExpediente">
+      <soap:operation soapAction="http://tempuri.org/IVPService/AsociarExpediente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDenuncias">
+      <soap:operation soapAction="http://tempuri.org/IVPService/GetDenuncias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VPService">
+    <wsdl:port name="bassicConfiguration" binding="tns:bassicConfiguration">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/VPServiceLibrary/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

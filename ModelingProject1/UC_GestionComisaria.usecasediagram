@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="48ee7e97-0ab4-4a50-8470-8490f167eb68" name="UC_GestionComisaria" linkedPackageId="23570c9a-26cf-4462-843e-24d9d9ff8cf3" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="670c169f-ca36-4f0b-b7be-cacbbda75f08">
+      <profileInstance Id="a42c080e-6054-4b33-af16-5297aecdd7d6" name="CSharpProfile">
+        <elementDefinition Id="9c51f331-1a30-4b81-8cbb-621a5b468baf" />
+      </profileInstance>
+      <elementDefinition Id="67fd8352-7ab6-4606-9c34-81ad4aea05fe" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="acaf6898-a97b-47be-b862-944b243ba3a5" name="Comisario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ffdbf25f-c97a-4f96-bf96-51c78410bc55" />
+        <generalsInternal>
+          <generalization Id="335040c4-e56f-4a0b-b4a8-275d659511e2" isSubstitutable="false">
+            <actorMoniker Id="ccc43be6-9461-485a-a811-db50769c6a24" LastKnownName="Agente" />
+            <elementDefinition Id="002c52eb-cbee-4cc8-ab61-911be35d3f56" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="44b7071f-e91f-415a-9329-afff6c056df5" isDerived="false" sourceEndRoleName="Jefe de policía" targetEndRoleName="Alta agente" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="38600413-b56e-49ce-81b7-db9c59d1e026" LastKnownName="Alta agente" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="39838171-212e-4f85-a325-d95fbe9e3995" name="Jefe de policía" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="33a4e386-db7f-4dac-918e-600fffe6680c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7195f4ce-85b7-4a08-9b08-4bf54e0168dd" name="Alta agente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ad2d3df1-2531-4507-a1b6-decedc203043" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9fe009ff-1fba-4239-910b-77c984aed78c" />
+          </association>
+          <association Id="0337ee2d-531a-4f8f-93a8-3d4ab2dccfda" isDerived="false" sourceEndRoleName="Jefe de policía" targetEndRoleName="Baja agente" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="74b1e438-4f9b-4814-8ddc-8dfbb298a87a" LastKnownName="Baja agente" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bc57e61f-bc61-4e57-b76b-e038941e4e1b" name="Jefe de policía" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a6855917-daba-458d-80b2-95434b2cc037" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7af1f928-bf1d-453f-b6dc-2c169c0de5ae" name="Baja agente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4b992e3b-8294-4e54-b9bf-59568984959e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6c064809-ea8e-4502-9dd9-729b7e94dc77" />
+          </association>
+          <association Id="0ed8580a-4633-41a9-83a2-3122d1c24afa" isDerived="false" sourceEndRoleName="Jefe de policía" targetEndRoleName="Modificar datos" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="44e10c79-c39a-4cc8-bb08-5a15110def2e" LastKnownName="Modificar datos de agente" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3ad89575-d71d-4854-94d0-67787f915729" name="Jefe de policía" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1d59232a-a410-4ae1-952a-f447d535b8d3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a10eb1ff-2937-4f4a-83ae-dd1a57f0db02" name="Modificar datos" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5d39e672-2e6c-4898-8029-5c635510fc05" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c9d60de4-7b77-4fde-b05d-78dff0c01e6c" />
+          </association>
+          <association Id="45e0970d-9023-4c25-921b-2672b3ca22ee" isDerived="false" sourceEndRoleName="Jefe de policía" targetEndRoleName="Modificar planning" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bc4db153-73c7-434c-8660-772d89d51d41" LastKnownName="Modificar planning" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fc078a9f-12ba-4024-b6c1-80939b637a53" name="Jefe de policía" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ab30dcb7-ea7f-49c4-8875-c103c6f16474" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="53f5fe84-f562-493b-9238-6556610dcab8" name="Modificar planning" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="59442eeb-0572-4f55-934f-707e28c17e47" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="af65a09f-c28f-4be1-b341-f872a037e8dc" />
+          </association>
+          <association Id="7b40448d-fa15-4ed0-8c77-09722ed80681" isDerived="false" sourceEndRoleName="Jefe de policía" targetEndRoleName="Crear planning" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d13512f3-a030-4456-93b4-f2d2330a5460" LastKnownName="Crear planning" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ebba38c2-8574-4abd-8125-fa20e2b95d47" name="Jefe de policía" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c3b80e3e-2249-4b89-a200-0dc30de9389c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="839cb415-4623-4b84-a94b-caf877ff9681" name="Crear planning" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="73b285dd-988d-4029-915a-5e886111206a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3e214659-b78e-4114-a451-2bbec439f3bc" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="38600413-b56e-49ce-81b7-db9c59d1e026" name="Alta agente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e101f7e6-0f10-46c3-869e-bd316cde3214" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="74b1e438-4f9b-4814-8ddc-8dfbb298a87a" name="Baja agente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="928bae51-d258-4afb-9899-a214f799fd39" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="44e10c79-c39a-4cc8-bb08-5a15110def2e" name="Modificar datos de agente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6e364e41-4fd6-4451-89d9-6e4cff2ee19c" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="ccc43be6-9461-485a-a811-db50769c6a24" name="Agente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="80659cb3-f5e9-432c-900e-bb7e12eaa05f" />
+        <targetEnds>
+          <association Id="7526d526-4f75-4772-b066-0be802066fff" isDerived="false" sourceEndRoleName="Agente" targetEndRoleName="Crear incidencia" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9f309e35-90a6-4732-ae82-48031149c9cf" LastKnownName="Crear incidencia" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="57b39521-abd3-4c03-8dcd-b74e8517d7ee" name="Agente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="03e9f51c-2568-4d73-b73e-aaf4e84a8825" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="eeb70e08-ac7a-47fc-8b28-1c167996df46" name="Crear incidencia" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a8301b0b-968b-4842-955f-13624fe49341" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c24b5e05-46a7-47e6-9b6b-5ae0fc37483a" />
+          </association>
+          <association Id="c118dd80-29c3-4744-b572-0d186f647a39" isDerived="false" sourceEndRoleName="Agente" targetEndRoleName="Crear planning" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d13512f3-a030-4456-93b4-f2d2330a5460" LastKnownName="Crear planning" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fb0cb136-669d-4bf2-b453-be661f85cc88" name="Agente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b3907f8f-a7b6-4dd6-a7f4-b88a815c0278" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9457b068-6b94-4798-9531-74a069668123" name="Crear planning" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="aa849632-6c34-42ff-a17f-7e970a185072" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1ff40307-5cb4-4aa1-82a2-ecf153923eeb" />
+          </association>
+          <association Id="0fba1636-a1ee-4d0a-9957-2e5945dd7168" isDerived="false" sourceEndRoleName="Agente" targetEndRoleName="Modificar planning" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bc4db153-73c7-434c-8660-772d89d51d41" LastKnownName="Modificar planning" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c146db94-3411-475f-b429-47375393abf7" name="Agente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="853d0fdc-742a-4c52-998b-ec77f8493b78" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="13360cee-d2ca-4f31-973f-7c8e809c67ee" name="Modificar planning" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="88d54539-a883-452e-8e05-7c4f9b1ed275" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="51f18d7d-1954-41fd-887f-b22f43221fcb" />
+          </association>
+          <association Id="f0187997-1526-4cd2-98b2-1170f924bea9" isDerived="false" sourceEndRoleName="Agente" targetEndRoleName="Consultar planning" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9ca4b970-8d27-4844-9ad6-0bb13d0a0f90" LastKnownName="Consultar planning" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="247a5953-46e6-4918-8920-2625a613cf46" name="Agente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="6851d6c7-5e8b-4470-8f20-e53f46e89e6b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f2b89146-bc61-4ed7-b780-0e55f5b9f795" name="Consultar planning" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fbb9a7f2-4a87-4b55-8856-6dce632088f9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="4860e253-126d-473c-8dbf-e55597524442" />
+          </association>
+          <association Id="4f0d3670-0c04-46fe-b426-096cfd10a833" isDerived="false" sourceEndRoleName="Agente" targetEndRoleName="Consultar incidencias" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="6799cd36-6e06-48ec-8475-9aae98fa0000" LastKnownName="Consultar incidencias" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="760a4048-f391-4a89-93cd-776613dc03f9" name="Agente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ffb31796-7a87-4311-99ef-1f55bcbdfe00" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="72b872e0-47e9-403a-a1ea-3ef54ffd4be7" name="Consultar incidencias" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="be1b08bd-2d77-4ac2-abe7-746ed2e775c7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c7a2d872-71d5-46cb-a836-d5d830bde561" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9f309e35-90a6-4732-ae82-48031149c9cf" name="Crear incidencia" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ef63dea8-5feb-4ff8-bc8b-2bf85d4e866b" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d13512f3-a030-4456-93b4-f2d2330a5460" name="Crear planning" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c9a83c68-7e29-4d9e-91a8-cbeb0f34aa6d" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bc4db153-73c7-434c-8660-772d89d51d41" name="Modificar planning" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f193a018-7223-47d7-8522-e8e4749bc215" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9ca4b970-8d27-4844-9ad6-0bb13d0a0f90" name="Consultar planning" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e70755a0-4006-4948-bfe3-50e681925d45" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6799cd36-6e06-48ec-8475-9aae98fa0000" name="Consultar incidencias" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ef6bb688-9d11-4eca-b49b-3123faf78629" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="23570c9a-26cf-4462-843e-24d9d9ff8cf3" name="Modelado">
+    <elementDefinition Id="9bf75dfc-cabd-4577-a76b-66fb17cd061b" />
+    <profileInstances>
+      <packageHasProfileInstances Id="3eaebba1-2b80-4fd7-90e5-3a5f9802e405">
+        <profileInstance Id="354a06ff-0f54-4fa9-8402-c8a0af140231" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="df65e561-2ace-4c50-ab0f-611908243aea">
+        <profileInstance Id="876bd56b-ecd2-4863-9067-ecb0df9124e3" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>
